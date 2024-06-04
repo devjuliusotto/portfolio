@@ -1,34 +1,134 @@
-body {
-  background-color: #282a36;
-  color: #f8f8f2;
+
+* {
+  background-color: #000;
+  color: white;
+  
 }
 
+/* Estilos gerais */
+body, html {
+  font-family: 'Arial', sans-serif;
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Personalização do contêiner 3D */
+.three-container {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Overlay para melhorar a legibilidade */
+.content-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Ajuste a opacidade conforme necessário */
+  z-index: 2;
+}
+
+/* Estilização do Navbar */
+.navbar {
+  border-bottom: 2px solid #00ff2a
+;
+  z-index: 3;  /* Mantém o navbar acima do overlay */
+}
+
+.nav-link {
+  color: #fff !important;
+}
+
+.nav-link:hover {
+  color: #00ff2a
+ !important;
+}
+
+/* Estilização da seção de cabeçalho */
 .header {
-  background-color: #44475a;
+  color: white;
+  padding: 20px 0;
+  position: relative;
+  z-index: 3; /* Mantém o cabeçalho acima do overlay */
 }
 
 .profile-image {
-  max-width: 150px;
-  border: 5px solid #50fa7b;
+  width: 120px;
+  height: 120px;
+  border: 3px solid #00ff2a
+;
+  border-radius: 60px;  /* torna a imagem redonda */
 }
 
-h1, h2 {
-  color: #50fa7b;
+/* Estilos das seções */
+.section-title {
+  color: #00ff2a
+;
+  margin: 20px 0;
 }
 
-a {
-  color: #8be9fd;
+.content {
+  padding: 20px;
+  position: relative;
+  z-index: 3; /* Mantém o conteúdo acima do overlay */
 }
 
-a:hover {
-  color: #50fa7b;
-}
-
-footer {
-  background-color: #44475a;
-  margin-top: 50px;
-}
-
+/* Estilos dos cards do portfólio */
 .card {
-  border: none;
+  background-color: #333;
+  color: #fff;
+}
+
+.card-hover:hover {
+  transform: scale(1.03);
+  transition: transform .3s ease-in-out;
+}
+
+.card-body {
+  transition: background-color .3s ease-in-out;
+}
+
+.card-body:hover {
+  background-color: #00ff2a;
+}
+
+/* Estilização do rodapé */
+footer {
+  background-color: #222;
+  color: #bbb;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  width: 100%;
+  z-index: 3; /* Mantém o rodapé acima do overlay */
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+  .three-container {
+      height: 200px;
+  }
+
+  .profile-image {
+      width: 80px;
+      height: 80px;
+  }
+
+  .header h1 {
+      font-size: 1.5rem;
+  }
+
+  .nav-link {
+      padding: 8px 12px;
+  }
 }
