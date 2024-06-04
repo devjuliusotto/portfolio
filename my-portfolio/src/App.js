@@ -2,13 +2,13 @@ import React, { useEffect } from 'react';
 import { Container, Navbar, Nav, Card, Button, Row, Col } from 'react-bootstrap';
 import './App.css';
 import * as THREE from 'three';
-import profileImage from './hack.jpg'; // Substitua pelo caminho da sua imagem de perfil
+import profileImage from './hack.jpg';
 
 function App() {
   useEffect(() => {
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ alpha: true }); // Certifique-se de que alpha está definido como true
+    const renderer = new THREE.WebGLRenderer({ alpha: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.getElementById('three-container').appendChild(renderer.domElement);
 
@@ -126,7 +126,7 @@ function App() {
                 </Card>
               </Col>
             </Row>
-            {/* Adicione mais projetos conforme necessário */}
+            {/* mais projetos aqui  */}
           </section>
           <section id="contato" className="my-5">
             <h2 className="section-title">Contato</h2>
