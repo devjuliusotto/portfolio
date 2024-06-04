@@ -15,6 +15,47 @@ body, html {
   overflow-x: hidden;
 }
 
+.display-4 {
+  font-size: 8rem !important; /* Aumenta o tamanho da fonte do título */
+  font-weight: bold; /* Torna o título mais destacado */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza verticalmente o conteúdo */
+  padding-top: 50px; /* Adiciona espaço no topo */
+  margin-top: 50px;
+}
+
+
+.lead {
+  font-size: 4.5rem !important; /* Aumenta o tamanho da fonte do subtítulo */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza verticalmente o conteúdo */
+  padding-top: 50px; /* Adiciona espaço no topo */
+
+}
+
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.display-4 {
+  overflow: hidden; /* Garante que o texto não será mostrado fora do seu contêiner */
+  border-right: .15em solid rgb(0, 255, 21); /* O cursor da digitação */
+  white-space: nowrap; /* Mantém o texto na mesma linha */
+  letter-spacing: .15em; /* Ajusta o espaçamento das letras */
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(0, 255, 34); }
+}
+
+
+
 /* Personalização do contêiner 3D */
 .three-container {
   height: 300px;
@@ -63,7 +104,7 @@ body, html {
 }
 
 .profile-image {
-  width: 120px;
+  width: 1200px;
   height: 120px;
   border: 3px solid #00ff2a
 ;
@@ -131,4 +172,15 @@ footer {
   .nav-link {
       padding: 8px 12px;
   }
+}
+
+::selection {
+  background-color: #00ff2a; /* Cor de fundo da seleção */
+  color: #000; /* Cor do texto na seleção */
+}
+
+/* Para navegadores baseados em WebKit como Chrome e Safari */
+::-webkit-selection {
+  background-color: #00ff2a;
+  color: #000;
 }

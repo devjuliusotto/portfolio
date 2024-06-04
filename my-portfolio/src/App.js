@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Container, Navbar, Nav, Card, Button, Row, Col } from 'react-bootstrap';
 import './App.css';
 import * as THREE from 'three';
-import profileImage from './profile.jpg'; // Substitua pelo caminho da sua imagem de perfil
+import profileImage from './hack.jpg'; // Substitua pelo caminho da sua imagem de perfil
 
 function App() {
   useEffect(() => {
@@ -17,7 +17,7 @@ function App() {
       color: 0x00ff00,
       wireframe: true,
       transparent: true,
-      opacity: 0.2
+      opacity: 0.5
     });
     const sphere = new THREE.Mesh(geometry, material);
     scene.add(sphere);
