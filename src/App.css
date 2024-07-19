@@ -1,0 +1,34 @@
+body {
+  background-color: #282a36;
+  color: #f8f8f2;
+}
+
+.header {
+  background-color: #44475a;
+}
+
+.profile-image {
+  max-width: 150px;
+  border: 5px solid #50fa7b;
+}
+
+h1, h2 {
+  color: #50fa7b;
+}
+
+a {
+  color: #8be9fd;
+}
+
+a:hover {
+  color: #50fa7b;
+}
+
+footer {
+  background-color: #44475a;
+  margin-top: 50px;
+}
+
+.card {
+  border: none;
+}
